@@ -72,7 +72,7 @@ The type configuration options allow you to specify different elasticsearch \_ty
 ### Setting Elasticsearch configuration options via ENV variables
 Alternatively, it's possible to configure elasticsearch via the following ENV variables which take precedence over the settings in the config file.
 
-`
+```bash
 ES_HOST
 ES_PORT
 ES_PATH
@@ -85,7 +85,7 @@ ES_GAUGE_DATA_TYPE
 ES_FORMATTER
 ES_USERNAME
 ES_PASSWORD
-`
+```
 
 ## Important upgrade from 0.2 to 0.3
 
