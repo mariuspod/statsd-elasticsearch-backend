@@ -69,6 +69,24 @@ The field _indexTimestamp_ allows you to determine the timestamping for your dyn
 
 The type configuration options allow you to specify different elasticsearch \_types for each statsd measurement.
 
+### Setting Elasticsearch configuration options via ENV variables
+Alternatively, it's possible to configure elasticsearch via the following ENV variables which take precedence over the settings in the config file.
+
+`
+ES_HOST
+ES_PORT
+ES_PATH
+ES_INDEX_PREFIX
+ES_INDEX_TIMESTAMP
+ES_COUNT_TYPE
+ES_TIMER_TYPE
+ES_TIMER_DATA_TYPE
+ES_GAUGE_DATA_TYPE
+ES_FORMATTER
+ES_USERNAME
+ES_PASSWORD
+`
+
 ## Important upgrade from 0.2 to 0.3
 
 Previously, the config value for timerDataType was always ignored and timer data was alwasy saved as the timerType + '\_stats'.  If you are upgrading a live instance from 0.2 please be aware that the value of timerDataType will now be respected and you should ensure that you have the proper type mappings (especially for @timestamp) or that your timerDataType is set to timerType + '\_stats'.
